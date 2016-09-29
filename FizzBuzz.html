@@ -3,7 +3,7 @@
 Created using JS Bin
 http://jsbin.com
 
-Copyright (c) 2016 by suyeda623 (http://jsbin.com/codazo/1/edit)
+Copyright (c) 2016 by suyeda623 (http://jsbin.com/zanovi/2/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -18,9 +18,24 @@ Released under the MIT license: http://jsbin.mit-license.org
 
 <script id="jsbin-javascript">
 function fizzBuzz(countTo) {
-  // your code here
+   var result = [];
+ for (var i = 1; i <= countTo; i++) {
+   if (i % 3 === 0 && i % 5 !== 0) {
+     result.push('fizz');
+   }
+   else if (i % 5 === 0 && i % 3 !== 0) {
+     result.push('buzz');
+   }
+   else if ( i % 3 === 0 && i % 5 === 0) {
+     result.push('fizzbuzz');
+   }
+   else {
+     result.push(i);
+   }
+ }
+  console.log(result)
+     return result;
 }
-
 
 // tests
 (function testFizzBuzz() {
